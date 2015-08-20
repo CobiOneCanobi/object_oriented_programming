@@ -77,15 +77,24 @@ puts "Please input an x and y coordinate for the plateau size"
 $plateau = gets.chomp.split(" ")
 $plateau.map!{|crrd| crrd.to_i}
 
-puts "Please input the initial start position and direction of the rover (remember it has to be in the plateau parameters)"
-posStart = gets.chomp.split(" ")
-rover = Rover.new(posStart)
+puts "Please input the initial start position and direction of rover 1 (remember it has to be in the plateau parameters)"
+posStart1 = gets.chomp.split(" ")
+rover1 = Rover.new(posStart1)
 
-puts "What move and turn instructions do you want to give to the rover"
-instructions = gets.chomp.split("")
-rover.read_instruction(instructions)
+puts "What move and turn instructions do you want to give to the rover 1"
+instructions1 = gets.chomp.split("")
+rover1.read_instruction(instructions1)
 
-puts "#{rover.x} #{rover.y} #{rover.direction}"
+puts "Please input the initial start position and direction of rover 2 (remember it has to be in the plateau parameters)"
+posStart2 = gets.chomp.split(" ")
+rover2 = Rover.new(posStart2)
+
+puts "What move and turn instructions do you want to give to the rover 2"
+instructions2 = gets.chomp.split("")
+rover2.read_instruction(instructions2)
+
+puts "#{rover1.x} #{rover1.y} #{rover1.direction}"
+puts "#{rover2.x} #{rover2.y} #{rover2.direction}"
 
 
 
